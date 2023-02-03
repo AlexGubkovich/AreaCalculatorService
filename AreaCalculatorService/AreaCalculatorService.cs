@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace AreaCalculatorService
 {
-    public static class AreaCalculatorService<T> where T : IAreaCalсulate
+    public static class AreaCalculatorService
     {
-        public static double CalculateArea(T shape)
+        public static double CalculateArea(IAreaCalсulate shape)
         {
             return shape.CalculateArea();
         }

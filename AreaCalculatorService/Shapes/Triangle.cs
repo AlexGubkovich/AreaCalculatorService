@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,6 +15,9 @@ namespace AreaCalculatorService.Shapes
 
         public Triangle(double sideA, double sideB, double sideC)
         {
+            if (sideA <= 0 || sideB <= 0 || sideC <= 0)
+                throw new ArgumentException("Side can't be zero or less");
+
             this.sideA = sideA;
             this.sideB = sideB;
             this.sideC = sideC;
@@ -21,6 +25,9 @@ namespace AreaCalculatorService.Shapes
 
         public Triangle(double side)
         {
+            if (side <= 0)
+                throw new ArgumentException("Side can't be zero or less");
+
             sideA = sideB = sideC = side;
         }
 

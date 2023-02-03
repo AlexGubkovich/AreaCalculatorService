@@ -16,17 +16,17 @@ namespace Benchmark
         private readonly Triangle rectangularTriangle = new Triangle(3, 4, 5);
         private readonly Triangle notRectangularTriangle = new Triangle(3, 3, 3);
 
-        [Benchmark(Description = "Rectangular_WithCheck")]
-        public void Calculate_Rectangular_TriangeAreaWithCheck()
-        {
-            var result = rectangularTriangle.CalculateAreaWithChechIsRectangular();
-        }
+        //[Benchmark(Description = "Rectangular_WithCheck")]
+        //public void Calculate_Rectangular_TriangeAreaWithCheck()
+        //{
+        //    var result = rectangularTriangle.CalculateAreaWithChechIsRectangular();
+        //}
 
-        [Benchmark(Description = "NotRectangular_WithCheck")]
-        public void Calculate_NotRectangularTriangeAreaWithCheck()
-        {
-            var result = notRectangularTriangle.CalculateAreaWithChechIsRectangular();
-        }
+        //[Benchmark(Description = "NotRectangular_WithCheck")]
+        //public void Calculate_NotRectangularTriangeAreaWithCheck()
+        //{
+        //    var result = notRectangularTriangle.CalculateAreaWithChechIsRectangular();
+        //}
 
         [Benchmark(Description = "Rectangular_WithoutCheck")]
         public void Calculate_Rectangular_TriangeAreaWithoutCheck()

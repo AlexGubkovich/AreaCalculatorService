@@ -12,6 +12,9 @@ namespace AreaCalculatorService.Shapes
 
         public Circle(double radius)
         {
+            if (radius <= 0)
+                throw new ArgumentException("Radius can't be zero or less");
+
             this.radius = radius;
         }
 
