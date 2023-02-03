@@ -41,18 +41,23 @@ namespace AreaCalculatorService.Shapes
             return S;
         }
 
-        public double CalculateAreaWithChechIsRectangular()
-        {
-            if (IsRectangular())
-            {
-                return sideA * sideB / 2;
-            }
-            else
-            {
-                var p = (sideA + sideB + sideC) / 2;
-                var S = Math.Sqrt(p * (p - sideA) * (p - sideB) * (p - sideC));
-                return S;
-            }
-        }
+        //it's slower
+        //Rectangular_WithCheck | 6.342 ns | 
+        //NotRectangular_WithCheck | 9.878 ns | 
+        //Rectangular_WithoutCheck | 6.813 ns |
+        //NotRectangular_WithoutCheck | 7.053 ns |
+        //public double CalculateAreaWithChechIsRectangular()
+        //{
+        //    if (IsRectangular())
+        //    {
+        //        return sideA * sideB / 2;
+        //    }
+        //    else
+        //    {
+        //        var p = (sideA + sideB + sideC) / 2;
+        //        var S = Math.Sqrt(p * (p - sideA) * (p - sideB) * (p - sideC));
+        //        return S;
+        //    }
+        //}
     }
 }

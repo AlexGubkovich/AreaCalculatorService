@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AreaCalculatorService", "Ar
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AreaCalculatorService.Tests", "..\AreaCalculatorService.Tests\AreaCalculatorService.Tests.csproj", "{66A22413-2354-473A-95F5-3567C3250AE9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "..\ConsoleApp1\ConsoleApp1.csproj", "{260CC302-0EED-47EE-8028-3B6C807770BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Benchmark", "..\Benchmark\Benchmark.csproj", "{BF6AE03F-38C4-4A94-9C10-AD138E6CB163}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{66A22413-2354-473A-95F5-3567C3250AE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{66A22413-2354-473A-95F5-3567C3250AE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{66A22413-2354-473A-95F5-3567C3250AE9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{260CC302-0EED-47EE-8028-3B6C807770BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{260CC302-0EED-47EE-8028-3B6C807770BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{260CC302-0EED-47EE-8028-3B6C807770BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{260CC302-0EED-47EE-8028-3B6C807770BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF6AE03F-38C4-4A94-9C10-AD138E6CB163}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF6AE03F-38C4-4A94-9C10-AD138E6CB163}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF6AE03F-38C4-4A94-9C10-AD138E6CB163}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF6AE03F-38C4-4A94-9C10-AD138E6CB163}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
