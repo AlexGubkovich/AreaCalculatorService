@@ -10,7 +10,7 @@ namespace AreaCalculatorService.Tests
         public void CalculateAreaForCircle(double radius, double result)
         {
             var circle = new Circle(radius);
-            Assert.Equal(AreaCalculatorService.CalculateArea(circle), result);
+            Assert.Equal(AreaCalculator.CalculateArea(circle), result);
         }
 
         [Theory]
@@ -18,12 +18,12 @@ namespace AreaCalculatorService.Tests
         [InlineData(-1)]
         public void CalculateAreaForCircleWithRadiusEqualToZeroOrLess(double radius)
         {
-            Action act = () =>
+            void act()
             {
                 var circle = new Circle(radius);
-                AreaCalculatorService.CalculateArea(circle);
-            };
-            
+                AreaCalculator.CalculateArea(circle);
+            }
+
             Assert.Throws<ArgumentException>(act);
         }
 
@@ -34,7 +34,7 @@ namespace AreaCalculatorService.Tests
         {
             var triangle = new Triangle(a, b, c);
 
-            Assert.Equal(result, AreaCalculatorService.CalculateArea(triangle));
+            Assert.Equal(result, AreaCalculator.CalculateArea(triangle));
         }
 
         [Theory]
@@ -42,11 +42,11 @@ namespace AreaCalculatorService.Tests
         [InlineData(-1)]
         public void CalculateAreaForTriangleWithSideEqualToZero(double side)
         {
-            Action act = () =>
+            void act()
             {
                 var triangle = new Triangle(side);
-                AreaCalculatorService.CalculateArea(triangle);
-            };
+                AreaCalculator.CalculateArea(triangle);
+            }
 
             Assert.Throws<ArgumentException>(act);
         }

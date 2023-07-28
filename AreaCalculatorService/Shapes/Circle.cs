@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AreaCalculatorService.Shapes
+﻿namespace AreaCalculatorService.Shapes
 {
-    public class Circle : IAreaCalсulate
+    public class Circle : IAreaCalсulable
     {
-        private double radius;
+        private readonly double radius;
 
         public Circle(double radius)
         {

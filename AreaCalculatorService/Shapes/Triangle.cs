@@ -1,17 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AreaCalculatorService.Shapes
+﻿namespace AreaCalculatorService.Shapes
 {
-    public class Triangle : IAreaCalсulate
+    public class Triangle : IAreaCalсulable
     {
-        private double sideA;
-        private double sideB;
-        private double sideC;
+        private readonly double sideA;
+        private readonly double sideB;
+        private readonly double sideC;
 
         public Triangle(double sideA, double sideB, double sideC)
         {
@@ -33,38 +26,15 @@ namespace AreaCalculatorService.Shapes
 
         public bool IsRectangular()
         {
-            if ((sideA * sideA + sideB * sideB == sideC * sideC) 
-                || (sideA * sideA + sideC * sideC == sideB * sideB)
-                || (sideB * sideB + sideC * sideC == sideA * sideA))
-                return true;
-            else return false;
+            return Math.Abs(sideA * sideA + sideB * sideB - sideC * sideC) < 1e-10
+                   || Math.Abs(sideA * sideA + sideC * sideC - sideB * sideB) < 1e-10
+                   || Math.Abs(sideB * sideB + sideC * sideC - sideA * sideA) < 1e-10;
         }
 
         public double CalculateArea()
         {
             var p = (sideA + sideB + sideC) / 2;
-            var S = Math.Sqrt(p * (p - sideA) * (p - sideB) * (p - sideC));
-
-            return S;
+            return Math.Sqrt(p * (p - sideA) * (p - sideB) * (p - sideC));
         }
-
-        //it's slower
-        //Rectangular_WithCheck | 6.342 ns | 
-        //NotRectangular_WithCheck | 9.878 ns | 
-        //Rectangular_WithoutCheck | 6.813 ns |
-        //NotRectangular_WithoutCheck | 7.053 ns |
-        //public double CalculateAreaWithChechIsRectangular()
-        //{
-        //    if (IsRectangular())
-        //    {
-        //        return sideA * sideB / 2;
-        //    }
-        //    else
-        //    {
-        //        var p = (sideA + sideB + sideC) / 2;
-        //        var S = Math.Sqrt(p * (p - sideA) * (p - sideB) * (p - sideC));
-        //        return S;
-        //    }
-        //}
     }
 }
