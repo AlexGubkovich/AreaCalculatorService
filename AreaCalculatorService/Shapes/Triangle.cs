@@ -2,9 +2,9 @@
 
 public class Triangle : IShape
 {
-    private readonly double SideA;
-    private readonly double SideB;
-    private readonly double SideC;
+    public readonly double SideA;
+    public readonly double SideB;
+    public readonly double SideC;
 
     public Triangle(double sideA, double sideB, double sideC)
     {
