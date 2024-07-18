@@ -1,20 +1,19 @@
-﻿namespace AreaCalculatorService.Shapes
+﻿namespace AreaCalculatorService.Shapes;
+
+public class Circle : IShape
 {
-    public class Circle : IAreaCalсulable
+    public readonly double Radius;
+
+    public Circle(double radius)
     {
-        private readonly double radius;
+        if (radius <= 0)
+            throw new ArgumentException("Radius can't be zero or less");
 
-        public Circle(double radius)
-        {
-            if (radius <= 0)
-                throw new ArgumentException("Radius can't be zero or less");
+        Radius = radius;
+    }
 
-            this.radius = radius;
-        }
-
-        public double CalculateArea()
-        {
-            return Math.Pow(radius, 2) * Math.PI;
-        }
+    public double CalculateArea()
+    {
+        return Math.Pow(Radius, 2) * Math.PI;
     }
 }

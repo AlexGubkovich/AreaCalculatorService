@@ -1,6 +1,10 @@
-use Example
+-- use Example
 
-SELECT p.Name, c.Name 
-	FROM Products as p LEFT JOIN Categories as c 
-		ON EXISTS (SELECT * FROM CategoryProduct WHERE CategoryId = c.Id AND ProductId = p.Id) 
-ORDER BY p.Id
+SELECT p.ProductName, c.CategoryName 
+	FROM Products p
+	LEFT JOIN 
+		ProductCategories pc ON p.ProductID = pc.ProductID
+	LEFT JOIN 
+		Categories c ON pc.CategoryID = c.CategoryID
+ORDER BY 
+	p.ProductName, c.CategoryName;
